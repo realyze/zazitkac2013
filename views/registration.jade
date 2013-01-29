@@ -8,9 +8,12 @@ head
   script(src='/assets/js/jquery.form.validation.js')
 
 body
-  .container
+  include navbar
+
+  .container(style="margin-top:90px;")
     .row
       .span12
+        .span9
         #registration
           h2.featurette-heading
             | Přihlašovací formulář
@@ -71,4 +74,6 @@ body
                   textarea#other(rows='3', required, name='other')
 
               .form-actions
-                input.btn.btn-primary(type="submit", value="Pošli mě (nezávazné příhlášení)")
+                input.btn.btn-primary(type="submit", value="Zmáčkni mě pro odesláni nezávazné příhlášky.")
+
+              <a href="/">zpět na hlavní stránku<a>
