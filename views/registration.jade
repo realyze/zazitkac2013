@@ -1,0 +1,74 @@
+!!!
+head
+  link(href='/assets/css/bootstrap.css', rel='stylesheet')
+  link(href='/assets/css/bootstrap-responsive.css', rel='stylesheet')
+  link(href='/assets/css/main.css', rel='stylesheet')
+
+  script(src='http://code.jquery.com/jquery-1.9.0.min.js')
+  script(src='/assets/js/jquery.form.validation.js')
+
+body
+  .container
+    .row
+      .span12
+        #registration
+          h2.featurette-heading
+            | Přihlašovací formulář
+          form#registrationForm.form-horizontal(action="/registration", method="POST")
+            .span8
+              .control-group
+                label.control-label(for='name') Jmenuji se
+                .controls
+                  input#name.input-large(type='text', name='name', required)
+              .control-group
+                label.control-label(for='email') Můj e-mail je
+                .controls
+                  input#email.input-large.email(type='email', name='email', required)
+              .control-group
+                label.control-label(for='phone') Můj telefon
+                .controls
+                  input#phone.input-large(type='text', name='phone', required)
+              .control-group
+                label.control-label(for='where') Na kurz pojedu z
+                .controls
+                  input#where.input-large(type='text', name='going_from', required)
+
+              hr
+
+              .control-group
+                label.control-label(for='food') Jsem vegetarián
+                .controls
+                  input(type="checkbox", name='vegetarian')
+              .control-group
+                label.control-label(for='food') Jsem vegan
+                .controls
+                  input(type="checkbox", name='vegan')
+              .control-group
+                label.control-label(for='food') Mám jiná stravovací specifika (prosíme popiš blíž)
+                .controls
+                  textarea#food(rows='3', cols="45", name='other_food_restrictions')
+              .control-group
+                label.control-label(for='health') Mám nějaké zdravotní omezení (prosíme popiš blíž)
+                .controls
+                  textarea#health(rows='3', required, name='health')
+
+              hr
+
+              .control-group
+                label.control-label(for='motivation') Proč bych na náš kurz rád jel?
+                .controls
+                  textarea#motivation(rows='3', required, name='motivation')
+              .control-group
+                label.control-label(for='look-forwards') Na co se těším?
+                .controls
+                  textarea#look-forwards(rows='3', required, name='look_forwards')
+
+              hr
+
+              .control-group
+                label.control-label(for='other') Chceš nám něco vzkázat nebo se na něco zeptat?
+                .controls
+                  textarea#other(rows='3', required, name='other')
+
+              .form-actions
+                input.btn.btn-primary(type="submit", value="Pošli mě (nezávazné příhlášení)")

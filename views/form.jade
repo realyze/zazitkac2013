@@ -1,0 +1,41 @@
+#registration.featurette
+  h2.featurette-heading
+    | Přihlašovací formulář
+
+
+  form.form-horizontal
+    .span8.accordion-body.collapse.in
+      .accordion-inner
+        .control-group
+          label.control-label(for='input01') jmeno
+          .controls
+            input#name.input-xlarge(type='text')
+        .control-group
+          label.control-label(for='email') e-mail
+          .controls
+            input#email.input-xlarge(type='text')
+        .control-group
+          label.control-label(for='phone') telefon
+          .controls
+            input#phone.input-xlarge(type='text')
+        .control-group
+          label.control-label(for='where') Odkud na kurz pojedeš
+          .controls
+            input#where.input-xlarge(type='text')
+        .control-group
+          label.control-label(for='food') Jsi vegetarián nebo vegan nebo máš jiná stravovací specifika?
+          .controls
+            textarea#food(rows='3')
+        .control-group
+          label.control-label(for='health') Máš nějaké zdravotní omezení?
+          .controls
+            input#health.input-xlarge(type='text')
+        .control-group
+          label.control-label(for='motivation') Proč bys na náš kurz rád jel?
+          .controls
+            input#motivation.input-xlarge(type='text')
+        .control-group
+          label.control-label(for='look-forwards') Na co se těšíš?
+          .controls
+            input#look-forwards.input-xlarge(type='text')
+

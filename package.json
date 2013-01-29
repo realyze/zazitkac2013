@@ -3,6 +3,10 @@
   "version": "0.0.1",
   "dependencies": {
     "express": "",
-    "coffee-script": "~1.4.0"
+    "coffee-script": "~1.4.0",
+    "jade": "~0.28.1",
+    "nodemailer": "~0.3.37",
+    "formidable": "~1.0.11",
+    "markdown": "~0.4.0"
   }
 }

@@ -1,0 +1,141 @@
+html(lang='en')
+head
+    meta(charset='utf-8')
+    title Carousel Template · Bootstrap
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(name='description', content='')
+    meta(name='author', content='')
+    //Le styles 
+    link(href='assets/css/bootstrap.css', rel='stylesheet')
+    link(href='assets/css/bootstrap-responsive.css', rel='stylesheet')
+    link(href='assets/css/main.css', rel='stylesheet')
+    // HTML5 shim, for IE6-8 support of HTML5 elements 
+    //if lt IE 9
+      script(src='http://html5shim.googlecode.com/svn/trunk/html5.js')
+  body
+    .navbar-wrapper
+      //Wrap the .navbar in .container to center it within the absolutely positioned parent. 
+      .container
+        .navbar.navbar-inverse.navbar-fixed-top
+          .navbar-inner
+            // Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize. 
+            a.btn.btn-navbar(data-toggle='collapse', data-target='.nav-collapse')
+              span.icon-bar
+              span.icon-bar
+              span.icon-bar
+            a.brand(href='#') Nauc se kricet
+            // Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. 
+            .nav-collapse.collapse
+              ul.nav
+                li.active
+                  a(href='#description') O kurzu
+                li
+                  a(href='#about-us') O nas
+                li
+                  a(href='#contact') Kontakt
+                li
+                  a(href='/registration/') Jak se mohu přihlásit
+
+                // Read about Bootstrap dropdowns at http://twitter.github.com/bootstrap/javascript.html#dropdowns 
+
+    #myCarousel.carousel.slide
+      .carousel-inner
+        .item.active
+          img(src='assets/img/ulice.jpg', alt='', title='Photo from http://www.flickr.com/photos/92349434@N00/395836079/sizes/l/in/photostream/')
+          .container
+            .carousel-caption
+              h1 Nauč se křičet
+              p.lead
+                | Nikdy jsem nemyslel, že by svoboda člověka záležela na tom, aby dělal, co chce, nýbrž spíš v tom, aby nikdy nedělal, co nechce.
+              p(style='text-align: right;') Jean-Jacques Russeau
+      //
+        a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
+                <a class="right carousel-control" href="#myCarousel" data-slide="next">›</a
+      p.pull-right(style='position: relative; top: -20px; color: white;')
+        | Photo by&nbsp;
+        a(href='http://www.flickr.com/photos/92349434@N00/') Raggedy Man
+        p
+    //
+       /.carousel 
+    //
+       Marketing messaging and featurettes
+    //
+       Wrap the rest of the page in another container to center all the content. 
+    .container.marketing
+      //
+         Three columns of text below the carousel 
+      #description.row.st-scroll
+        .span12
+          h2.featurette-heading
+            | O kurzu.
+            span.muted&nbsp;Máš svoji hlavu a stojíš si za svým?
+          p.lead
+            | Máš pocit, že žiješ ve světě příkazů a pravidel?
+            | Chceš měnit věci kolem sebe?
+          p.lead
+            | Tak VYSTUP Z ŘADY! a pojeď s námi na prožitkový kurz !
+
+          p
+            :markdown
+              Vystup z řady! je **autorský prožitkový kurz**, za kterým stojí členové lektorské sekce INEX-SDA.
+              Vystup z řady! ti dá možnost, jak odhodit vlastní zábrany.
+              Vystup z řady! je prodloužený víkend v krásném prostředí se skvělými lidmi.
+              Vystup z řady! se uskuteční **ve dnech 14. - 17. března 2013**.
+              Vystup z řady! ti za **cenu 1490** Kč naservíruje plnou penzi, střechu nad hlavou a nezapomenutelný žážitek.
+              Vystup z řady! má omezenou kapacitu, takže pokud chceš jet, vyplň co nejdříve [přihlašovací formulář](/registration) a čekej na odpověď.
+          
+
+      //START THE FEATURETTES 
+      hr.featurette-divider
+      #about-us.featurette
+        h2.featurette-heading
+          | Lektorský tým.
+          span.muted&nbsp;Kdo jsme a co děláme.
+        p.lead
+          | Tým, který stojí za zážitkovým kurzem „Nauč se křičet“ dalo dohromady společné nadšení pro dobrovolnictví. 
+        p
+          | Své lektorské zkušenosti většina z nás nejprve předávala na školeních a setkáních pořádaných skrze INEX-SDA a když byl v roce 2011 založen dobrovolnický klub DoK, nadšeně jsme se připojili do lektorské a školitelské sekce. 
+          Když pak přišla nabídka uskutečnit vlastní víkendový kurz, neváhali jsme ani minutu a pustili se do práce. Výsledkem byl prožitkový kurz „Na jedné lodi“, který se uskutečnil v březnu r. 2012. A protože ohlasy byly kladné a naše nadšení veliké, rozhodli jsme se v pořádání podobných kurzů pokračovat. A tak vznikl tento kurz.
+
+        .profiles
+          include profiles
+
+        hr.featurette-divider
+      #contact.featurette
+        h2.featurette-heading
+          | Kontakty.
+          span.muted Pokud mate nejake dotazy.
+        p.lead
+          | Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.
+      
+      hr.featurette-divider
+
+      //
+         /END THE FEATURETTES 
+      //
+         FOOTER 
+      footer
+        p.pull-right
+          a(href='#') Back to top
+        p
+          | © 2012 Company, Inc. ·
+          a(href='#') Privacy
+          | ·
+          a(href='#') Terms
+    //
+       /.container 
+    //
+       Le javascript
+    //
+       Placed at the end of the document so the pages load faster 
+    script(src='http://code.jquery.com/jquery-1.9.0.min.js')
+    script(src='assets/js/bootstrap.js')
+    script
+      !function ($) {
+      $(function(){
+      // carousel demo
+      $('#myCarousel').carousel()
+      })
+      }(window.jQuery)
+    script(src='assets/js/scrollableLinks.js')
+
