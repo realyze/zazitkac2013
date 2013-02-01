@@ -20,6 +20,10 @@
 body {
   padding-bottom: 40px;
   color: #5a5a5a;
+  max-width: 1385px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: justify;
 }
 
 
